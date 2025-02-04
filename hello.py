@@ -1,5 +1,8 @@
 def calculate_year_of_100(age: int, current_year: int = 2023) -> int:
-    return (current_year - age) + 100
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+    else:
+        return (current_year - age) + 100
 
 def main():
     name = input("What is your name? ")
